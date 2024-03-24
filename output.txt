@@ -1,0 +1,21 @@
+
+Your daily calorie intake: 2632.46 calories
+Protein: 98.72 grams
+Fats: 73.12 grams
+Carbohydrates: 394.87 grams
+Fiber: 38 grams
+
+
+Selected foods for each meal:
+
+Meal 1 ( Breakfast ):
+Rice: 130 calories
+Peanut Butter: 588 calories
+
+Meal 2 ( Lunch ):
+Chicken Breast: 165 calories
+Almonds: 579 calories
+
+Meal 3 ( Dinner ):
+Whole Wheat Bread: 250 calories
+Walnuts: 654 calories

@@ -1,0 +1,8 @@
+
+Meal 1 ( Breakfast ):
+
+Meal 2 ( Lunch ):
+
+Meal 3 ( Dinner ):
+
+Geminai Output:
