@@ -1,0 +1,87 @@
+{%extends 'base.html'%}
+{%block content%}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f8f8;
+        color: #333;
+    }
+    .container-poi {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+    h1 {
+        text-align: center;
+        color: white;
+    }
+    img {
+        display: block;
+        margin: 0 auto 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    th, td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    .price {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #28a745;
+        text-align: center;
+    }
+</style>
+<section class="py-5">
+    <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+<div class="container-poi">
+
+    <img src="{{url_for('static', filename=image)}}" alt="Product Image">
+
+    <table>
+        <tr>
+            <th>Nutrients</th>
+            <th>Amount per 100g</th>
+        </tr>
+        <tr>
+            <td>Proteins</td>
+            <td>{{prot}}</td>
+        </tr>
+        <tr>
+            <td>Fats</td>
+            <td>{{fats}}</td>
+        </tr>
+        <tr>
+            <td>Carbohydratess</td>
+            <td>{{carbs}}</td>
+        </tr>
+        <tr>
+            <td>Fibers</td>
+            <td>{{fibers}}</td>
+        </tr>
+        <tr>
+            <td>Calories</td>
+            <td>{{calories}}</td>
+        </tr>
+    </table>
+
+    <p class="price">Price: {{price}}</p>
+</div>
+</div>
+</section>
+
+{%endblock%}

@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f8f8;
+        color: #333;
+    }
+    .container-poi {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+    h1 {
+        text-align: center;
+        color: #007bff;
+    }
+    img {
+        display: block;
+        margin: 0 auto 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    th, td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    .price {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #28a745;
+        text-align: center;
+    }
+</style>
+    <div class="food-items-container">
+        {% for i in range(0, len) %}
+        <div class="food-item">
+            <div>
+                <img src="{{}}" />
+                <br>
+                <p class="food-txt">{{food_names[i]}}</p>
+            </div>
+         </div>
+        {% endfor %}
+    
+    </div>
+{% endblock %}

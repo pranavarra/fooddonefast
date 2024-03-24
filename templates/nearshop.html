@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="card border-0 shadow">
+                    <div class="card-body p-5">
+                        <h2 class="mb-4">Find Closest Stores</h2>
+                        <form action="/findstore" method="post">
+                            <div class="mb-3">
+                                <label for="zipcode" class="form-label">Enter Your Zipcode</label>
+                                <input type="number" class="form-control" id="zipcode" name="zipcode" required>
+                            </div>
+                            <button type="submit" class="btncls">Submit</button>
+                        </form>
+                        <hr>
+                        <div id="storeList">
+                            <h3>Closest Stores:</h3>
+                            <ul>
+                                {% for i in range(0, len) %}
+                                    <li>
+                                        <strong>Address:</strong> {{ addresses[i] }}<br>
+                                        <strong>Phone:</strong> {{ phones[i] }}
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div id="map" class="mt-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    #map {
+        height: 300px;
+        width: 100%;
+    }
+</style>
+{% endblock %}

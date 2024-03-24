@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+        {% for i in range(0, len) %}
+        <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="{{url_for('static', filename=images[i])}}" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">{{food_names[i]}}</h5>
+                                    <!-- Product price-->
+                                    <!--$40.00 - $80.00-->
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <form action="/item" method="post">
+                                    
+                                <div class="text-center"><button type="submit" name="item_data" value="{{food_names[i]}}" class="btncls">View Options</button></div>
+                                </form>
+                            </div>
+                        </div>
+        </div>
+        {% endfor %}
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{{url_for('static', filename='scripts.js')}}"></script>
+
+    </div>
+</div>
+</section>
+        
+{% endblock %}
